@@ -1,18 +1,28 @@
-## Hi there 👋
+# Hi, I'm Erika Gianni
 
-<!--
-**egianni-evolve/egianni-evolve** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+I help teams and organizations operationalize AI with intention. My work sits at the intersection of behavior design, digital strategy, and AI education, where I focus on making AI adoption practical, human-centered, and sustainable.
 
-Introduction:
-I love helping teams bring strategy to life. I am an AI educator and operations specialist with 20+ years of experience designing and implementing strategic initiatives that fuel organizational growth and cross-functional collaboration. My deep curiosity and knack for quickly adapting to ever-changing environments were shaped through my time living abroad as a Peace Corps Volunteer and years of driving digital transformation efforts in both Fortune 500 and midsize businesses, as well as in the private and public sectors. This diverse experience has sharpened my ability to swiftly navigate new cultures, industries, roles, and team dynamics, always with a practical focus on making things easier for customers to engage and employees to thrive.
+I think in systems, not symptoms. That means I'm less interested in the shiny tool and more interested in the underlying dynamics: how people actually change behavior, how processes break down, and where the real leverage points are.
 
-Key Projects:
-- claude-skills
+## What I'm Building
 
+**Designed on Purpose Consulting** — AI education and operations consulting grounded in behavior science and systems thinking. I help teams move from "we should use AI" to "here's how AI fits into what we actually do."
 
-What I'm Working on Now:
-- 🔭 I’m currently working on building out my github profile
-- 🌱 I’m currently learning claude skills
+**Open-source Claude plugins** — Productivity systems and frameworks for Claude that anyone can fork and adapt. Built from real workflows, not theory.
 
+## What You'll Find Here
 
--->
+- [**claude-plugins**](https://github.com/egianni-evolve/claude-plugins) — A Notion-backed productivity system for Claude: brain dump capture, task creation, weekly processing, OKR tracking, and area-of-interest management. Five interconnected skills with slash commands.
+
+## What I'm Exploring
+
+AI operationalization using the CRAFT framework. Behavior design for technology adoption (Tiny Habits meets enterprise AI). How to build systems that make the right thing the easy thing. The gap between AI capability and AI integration.
+
+## Background
+
+20+ years designing and implementing strategic initiatives across Fortune 500 companies, midsize businesses, and the public sector. Former Peace Corps Volunteer. That experience taught me something that applies to every AI project I touch: change is a human problem first, a technology problem second.
+
+## Connect
+
+- [LinkedIn](https://www.linkedin.com/in/erikagianni/) — Where I write about AI operations, behavior design, and systems thinking
+- Based in Natick, MA
