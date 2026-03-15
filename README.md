@@ -6,7 +6,7 @@ I think in systems, not symptoms. That means I'm less interested in the shiny to
 
 ## What I'm Building
 
-**Designed on Purpose Consulting** — AI education and operations consulting grounded in behavior science and systems thinking. I help teams move from "we should use AI" to "here's how AI fits into what we actually do."
+**AI education and operations consulting** grounded in behavior science and systems thinking. I help teams move from "we should use AI" to "here's how AI fits into what we actually do."
 
 **Open-source Claude plugins** — Productivity systems and frameworks for Claude that anyone can fork and adapt. Built from real workflows, not theory.
 
@@ -25,4 +25,3 @@ AI operationalization using the CRAFT framework. Behavior design for technology 
 ## Connect
 
 - [LinkedIn](https://www.linkedin.com/in/erikagianni/) — Where I write about AI operations, behavior design, and systems thinking
-- Based in Natick, MA
