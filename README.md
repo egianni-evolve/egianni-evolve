@@ -8,11 +8,11 @@ I think in systems, not symptoms. That means I'm less interested in the shiny to
 
 **AI education and operations consulting** grounded in behavior science and systems thinking. I help teams move from "we should use AI" to "here's how AI fits into what we actually do."
 
-**Open-source Claude plugins** — Productivity systems and frameworks for Claude that anyone can fork and adapt. Built from real workflows, not theory.
+**Special projects** — side experiments and builds across the areas I'm genuinely curious about. Some will turn into something. Some are just interesting. All of them start with a real question.
 
 ## What You'll Find Here
 
-- [**claude-plugins**](https://github.com/egianni-evolve/claude-plugins) — A Notion-backed productivity system for Claude: brain dump capture, task creation, weekly processing, OKR tracking, and area-of-interest management. Five interconnected skills with slash commands.
+- [**special-projects**](https://github.com/egianni-evolve/egianni-evolve) — A running collection of side experiments in the areas I'm actively exploring: AI tools, behavior design, productivity systems, and whatever has my attention right now.
 
 ## What I'm Exploring
 
