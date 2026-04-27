@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leverage Lab — Erika Gianni</title>
+  <style>
+    :root {
+      --bg: #0b1020;
+      --card: #151c34;
+      --ink: #eaf0ff;
+      --muted: #a9b7e8;
+      --accent: #62e7c5;
+      --accent-2: #9b7bff;
+      --warn: #ffd166;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      background: radial-gradient(circle at top right, #1d2955 0, var(--bg) 40%);
+      color: var(--ink);
+      line-height: 1.5;
+    }
+    .wrap { max-width: 980px; margin: 0 auto; padding: 24px; }
+    h1 { margin: 0 0 12px; font-size: clamp(1.8rem, 3vw, 2.6rem); }
+    h2 { margin: 0 0 8px; font-size: 1.1rem; color: var(--accent); }
+    p { margin: 0 0 12px; color: var(--muted); }
+    .grid {
+      display: grid;
+      gap: 16px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      margin-top: 18px;
+    }
+    .card {
+      background: linear-gradient(160deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 14px;
+      padding: 16px;
+      backdrop-filter: blur(3px);
+      box-shadow: 0 8px 22px rgba(0,0,0,0.2);
+    }
+    ul { margin: 8px 0 0 16px; padding: 0; }
+    li { margin: 6px 0; color: var(--ink); }
+    .pill {
+      display: inline-block;
+      background: rgba(98, 231, 197, 0.15);
+      color: var(--accent);
+      padding: 3px 8px;
+      border-radius: 999px;
+      margin-right: 6px;
+      font-size: .83rem;
+    }
+    .builder {
+      margin-top: 20px;
+      background: var(--card);
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,0.12);
+      padding: 20px;
+    }
+    label { display: block; margin-top: 12px; font-weight: 600; }
+    input[type="range"] { width: 100%; }
+    .row { display: grid; grid-template-columns: 1fr auto; gap: 8px; align-items: center; }
+    .output {
+      margin-top: 14px;
+      background: rgba(255,255,255,0.04);
+      border: 1px dashed rgba(255,255,255,0.25);
+      border-radius: 12px;
+      padding: 12px;
+      white-space: pre-wrap;
+    }
+    button {
+      margin-top: 14px;
+      border: 0;
+      border-radius: 10px;
+      padding: 11px 14px;
+      font-weight: 700;
+      cursor: pointer;
+      color: #05140f;
+      background: linear-gradient(120deg, var(--accent), #86f1d7);
+    }
+    .small { font-size: .9rem; color: var(--muted); }
+    .insight { color: var(--warn); font-weight: 600; }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <h1>Leverage Lab for Erika</h1>
+    <p>Built from your public profile: systems thinker, behavior-design lens, and practical AI operationalization focus.</p>
+
+    <section class="grid">
+      <article class="card">
+        <h2>1) Genuinely useful in daily work</h2>
+        <div>
+          <span class="pill">High leverage</span><span class="pill">Low overhead</span>
+        </div>
+        <ul>
+          <li>Create a reusable <strong>AI Adoption Friction Audit</strong> for every client team in week 1.</li>
+          <li>Standardize a <strong>decision log</strong>: where AI helped, where it failed, and what changed in process.</li>
+          <li>Add a weekly <strong>Behavior + Workflow Retro</strong>: not tool-first, but “what behavior changed?”</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h2>2) What you may not know about yourself</h2>
+        <p class="insight">You’re likely underpricing your translation layer.</p>
+        <p>Your strongest differentiator is not just AI knowledge—it’s your ability to translate strategy into daily behavior and operating rhythms. That is rare, defensible, and productizable.</p>
+      </article>
+
+      <article class="card">
+        <h2>3) Opportunity you might be underusing</h2>
+        <ul>
+          <li>Package your method into a <strong>90-day operating system</strong>, not ad hoc consulting.</li>
+          <li>Turn each client engagement into anonymized “patterns library” content.</li>
+          <li>License an internal enablement kit (playbooks, prompts, rituals, scorecards).</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="builder">
+      <h2>4) Playable build: Daily Leverage Experiment Designer</h2>
+      <p class="small">Slide controls, then generate a custom one-week experiment you can run with a team.</p>
+
+      <div class="row">
+        <label for="impact">Target impact (Speed → Strategic lift)</label>
+        <output id="impactVal">6</output>
+      </div>
+      <input id="impact" type="range" min="1" max="10" value="6" />
+
+      <div class="row">
+        <label for="change">Behavior change depth (Tiny habit → Operating norm)</label>
+        <output id="changeVal">7</output>
+      </div>
+      <input id="change" type="range" min="1" max="10" value="7" />
+
+      <div class="row">
+        <label for="effort">Team effort tolerance (Light touch → Deep implementation)</label>
+        <output id="effortVal">5</output>
+      </div>
+      <input id="effort" type="range" min="1" max="10" value="5" />
+
+      <button id="generate">Generate my experiment</button>
+      <div id="result" class="output">Your custom plan appears here...</div>
+    </section>
+  </main>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const inputs = ["impact", "change", "effort"];
+
+    function syncLabels() {
+      inputs.forEach((key) => {
+        $(key + "Val").value = $(key).value;
+      });
+    }
+
+    function chooseTrack(impact, change, effort) {
+      if (impact >= 8 && change >= 7) return "AI Operating System Sprint";
+      if (change >= 8 && effort <= 5) return "Tiny Habits for AI Adoption";
+      if (impact <= 4 && effort <= 4) return "Workflow Quick-Wins Audit";
+      return "CRAFT Integration Micro-Pilot";
+    }
+
+    function buildPlan() {
+      const impact = Number($("impact").value);
+      const change = Number($("change").value);
+      const effort = Number($("effort").value);
+      const track = chooseTrack(impact, change, effort);
+
+      const focus = impact > change ? "process throughput + decision speed" : "behavior reinforcement + adoption consistency";
+      const cadence = effort > 7 ? "daily 20-min standup" : "3 checkpoints/week";
+      const metric = impact > 6 ? "hours saved per role + cycle-time delta" : "adoption rate + ritual completion";
+
+      const plan = [
+        `Recommended track: ${track}`,
+        "",
+        "Week design:",
+        `1) Define one workflow to improve (${focus}).`,
+        `2) Run a ${cadence} to review blockers and wins.`,
+        `3) Use one shared scorecard metric: ${metric}.`,
+        "4) End week with a 15-min retrofit: keep / kill / scale.",
+        "",
+        "Prompt to use with your client team:",
+        '"What is the smallest behavior change that makes the right AI-supported action the easiest default this week?"'
+      ].join("\n");
+
+      $("result").textContent = plan;
+      localStorage.setItem("leverage-lab-plan", plan);
+    }
+
+    inputs.forEach((id) => $(id).addEventListener("input", syncLabels));
+    $("generate").addEventListener("click", buildPlan);
+
+    const saved = localStorage.getItem("leverage-lab-plan");
+    if (saved) $("result").textContent = saved;
+    syncLabels();
+  </script>
+</body>
+</html>
