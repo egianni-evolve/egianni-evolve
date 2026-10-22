@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Leverage Lab — Erika Gianni</title>
+  <title>Leverage Lab | Erika Gianni</title>
   <style>
     :root {
       --bg: #0b1020;
@@ -29,7 +29,7 @@
     .grid {
       display: grid;
       gap: 16px;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
       margin-top: 18px;
     }
     .card {
@@ -95,16 +95,16 @@
           <span class="pill">High leverage</span><span class="pill">Low overhead</span>
         </div>
         <ul>
-          <li>Create a reusable <strong>AI Adoption Friction Audit</strong> for every client team in week 1.</li>
+          <li>Create a reusable <strong>AI Enablement Friction Audit</strong> for every client team in week 1.</li>
           <li>Standardize a <strong>decision log</strong>: where AI helped, where it failed, and what changed in process.</li>
           <li>Add a weekly <strong>Behavior + Workflow Retro</strong>: not tool-first, but “what behavior changed?”</li>
         </ul>
       </article>
 
       <article class="card">
-        <h2>2) What you may not know about yourself</h2>
-        <p class="insight">You’re likely underpricing your translation layer.</p>
-        <p>Your strongest differentiator is not just AI knowledge—it’s your ability to translate strategy into daily behavior and operating rhythms. That is rare, defensible, and productizable.</p>
+        <h2>2) Turn a goal into a test</h2>
+        <p class="insight">Start with one workflow and one observable change.</p>
+        <p>Turn a broad goal into a small change your team can test. Use the experiment below to choose a workflow, set a cadence, and measure the result.</p>
       </article>
 
       <article class="card">
@@ -156,7 +156,7 @@
 
     function chooseTrack(impact, change, effort) {
       if (impact >= 8 && change >= 7) return "AI Operating System Sprint";
-      if (change >= 8 && effort <= 5) return "Tiny Habits for AI Adoption";
+      if (change >= 8 && effort <= 5) return "Tiny Habits for AI Enablement";
       if (impact <= 4 && effort <= 4) return "Workflow Quick-Wins Audit";
       return "CRAFT Integration Micro-Pilot";
     }
@@ -176,7 +176,7 @@
         "",
         "Week design:",
         `1) Define one workflow to improve (${focus}).`,
-        `2) Run a ${cadence} to review blockers and wins.`,
+        `2) Review blockers and wins at this cadence: ${cadence}.`,
         `3) Use one shared scorecard metric: ${metric}.`,
         "4) End week with a 15-min retrofit: keep / kill / scale.",
         "",
@@ -185,13 +185,14 @@
       ].join("\n");
 
       $("result").textContent = plan;
-      localStorage.setItem("leverage-lab-plan", plan);
+      try { localStorage.setItem("leverage-lab-plan", plan); } catch { /* The tool also works without browser storage. */ }
     }
 
     inputs.forEach((id) => $(id).addEventListener("input", syncLabels));
     $("generate").addEventListener("click", buildPlan);
 
-    const saved = localStorage.getItem("leverage-lab-plan");
+    let saved = null;
+    try { saved = localStorage.getItem("leverage-lab-plan"); } catch { /* Browser storage is optional. */ }
     if (saved) $("result").textContent = saved;
     syncLabels();
   </script>
