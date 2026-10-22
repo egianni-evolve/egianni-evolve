@@ -25,3 +25,8 @@ AI operationalization using the CRAFT framework. Behavior design for technology 
 ## Connect
 
 - [LinkedIn](https://www.linkedin.com/in/erikagianni/) — Where I write about AI operations, behavior design, and systems thinking
+
+
+## Try Something Interactive
+
+- [Leverage Lab](./leverage-lab.html) is a small interactive experiment designer. Download the HTML file and open it in your browser; it runs locally and needs no account.
